@@ -10,7 +10,7 @@
 ---
 
 ## 📋 Executive Summary
-**Project AETHER** is a computational physics engine designed to solve the **Inverse Problem** of Dark Energy. Instead of training a black-box model on pre-labeled data, this project utilizes a **Physics-Informed Neural Network (PINN)** to discover the Equation of State ($w$) directly from noisy observational data.
+I built this project to visualize the 'Vacuum Catastrophe', the 120-order-of-magnitude mismatch between Quantum Mechanics and General Relativity. Instead of just reading about it, I wanted to build a pipeline that derives the discrepancy from scratch using real observational constraints.
 
 The pipeline successfully:
 1.  **Quantifies Uncertainty** in kinematic parameters ($H_0$, $\Omega_m$) using Markov Chain Monte Carlo (MCMC).

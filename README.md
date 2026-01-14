@@ -53,17 +53,23 @@ The project is structured into four distinct engineering phases, moving from sta
 
 ## 📊 Key Results
 
-### 1. The Discovery (Phase 2)
+### 1. Bayesian Parameter Estimation (Phase 1)
+Establishing the observational ground truth for $H_{0}$ and $\Omega_{m}$ using Markov Chain Monte Carlo (MCMC). This phase quantifies uncertainty and creates the "kinematic anchor" that the Neural Network uses as a hard constraint.
+
+![Phase 1 Result](results/01_banana_plot.png)
+![Phase 1 Result](results/01_walker_trace.png)
+
+### 2. The Discovery (Phase 2)
 The Green Line represents the AI's learned Density function. Despite training on noisy data (black dots), the network successfully filtered the signal and derived a stable Equation of State ($w \approx -1$), confirming the standard $\Lambda$CDM model.
 
 ![Phase 2 Result](results/02_discovery_plot.png)
 
-### 2. The Catastrophe (Phase 3)
+### 3. The Catastrophe (Phase 3)
 A rigorous comparison of the Observed Vacuum Energy (inferred by the AI) versus the Theoretical Vacuum Energy (predicted by QFT). The log-scale highlights the massive $10^{120}$ error.
 
 ![Phase 3 Result](results/03_catastrophe_plot.png)
 
-### 3. The Crash (Phase 4)
+### 4. The Crash (Phase 4)
 A dynamical simulation showing the scale factor $a(t)$ of the universe. The green line is the stable reality found by the AI. The red line is the instant singularity predicted by Quantum Theory.
 
 ![Phase 4 Result](results/04_simulation_crash.png)

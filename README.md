@@ -85,3 +85,7 @@ The project is designed as a sequential pipeline of Jupyter Notebooks.
 2.  **`02_discovery.ipynb`**: Trains the PINN to discover the Dark Energy Equation of State.
 3.  **`03_theory.ipynb`**: Calculates the Theoretical Vacuum Energy (QFT) and the discrepancy magnitude.
 4.  **`04_simulation.ipynb`**: Simulates the dynamical history of the universe, comparing Reality vs. Theory.
+
+## ⚠️ Challenges & Future Improvements
+* **The ODE Overflow:** In Phase 4, the theoretical vacuum energy is so massive ($10^{122}$) that standard solvers like Runge-Kutta explode instantly. I had to manually truncate the simulation time to nanoseconds to capture the crash.
+* **PINN Stability:** Getting the Neural Network to converge on $w = -1$ was difficult. I found that adding a "Physics Loss" penalty of 20.0 was necessary to stop the model from overfitting the noise.

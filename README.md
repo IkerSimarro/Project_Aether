@@ -79,17 +79,9 @@ A dynamical simulation showing the scale factor $a(t)$ of the universe. The gree
 * emcee, corner
 
 ### Running the Pipeline
-The project is designed as a sequential pipeline. Data is passed between stages via the `results/` directory.
+The project is designed as a sequential pipeline of Jupyter Notebooks.
 
-```bash
-# 1. Run Bayesian Inference to constrain H0 and Omega_m
-python 01_inference.py
-
-# 2. Train the Physics-Informed Neural Network
-python 02_discovery.py
-
-# 3. Calculate the Quantum Discrepancy
-python 03_theory.py
-
-# 4. Run the Dynamical Simulation
-python 04_simulation.py
+1.  **`01_inference.ipynb`**: Runs Bayesian Inference to constrain $H_0$ and $\Omega_m$ from noisy data.
+2.  **`02_discovery.ipynb`**: Trains the PINN to discover the Dark Energy Equation of State.
+3.  **`03_theory.ipynb`**: Calculates the Theoretical Vacuum Energy (QFT) and the discrepancy magnitude.
+4.  **`04_simulation.ipynb`**: Simulates the dynamical history of the universe, comparing Reality vs. Theory.

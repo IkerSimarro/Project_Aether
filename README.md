@@ -24,13 +24,13 @@ The pipeline successfully:
 
 The project is structured into four distinct engineering phases, moving from statistical inference to theoretical validation.
 
-### Phase 1: The Statistician (Bayesian Inference)
+### Phase 1: Bayesian Inference & MCMC
 * **Goal:** Establish ground truth for kinematic parameters ($H_0$, $\Omega_m$) from noisy sensor data.
 * **Method:** Implemented an **MCMC Ensemble Sampler** (`emcee`) with 32 random walkers to explore the likelihood space of the Friedmann metric.
 * **Outcome:** Resolved parameter degeneracy and quantified the confidence intervals ($1\sigma$) for the Neural Network to use as fixed constraints.
 * **Key Tech:** `emcee`, `corner.py`, Bayesian Statistics.
 
-### Phase 2: The Researcher (Physics-Informed Neural Network)
+### Phase 2: Physics-Informed Neural Network (PINN)
 * **Goal:** Solve the Inverse Differential Equation to find the Dark Energy Equation of State ($w$).
 * **Method:**
     * Designed a **Density-First Architecture** ($z \rightarrow \rho \rightarrow H$) to enforce positivity constraints (`Softplus`).
@@ -39,12 +39,12 @@ The project is structured into four distinct engineering phases, moving from sta
 * **Outcome:** The AI "discovered" that $w \approx -1.0$ (Cosmological Constant) purely from raw data, without supervision.
 * **Key Tech:** `PyTorch`, `Autograd`, Savitzky-Golay Filtering.
 
-### Phase 3: The Theory (Quantum Field Theory)
+### Phase 3: Quantum Vacuum Calculation
 * **Goal:** Calculate the theoretical energy density of the vacuum ($\rho_{vac}$) using the Planck Scale cutoff.
 * **Method:** Computed the Zero-Point Energy sum for a scalar field up to the Planck Length ($\ell_p \approx 1.6 \times 10^{-35}$ m).
 * **Outcome:** Revealed the **Vacuum Catastrophe**: A discrepancy of $10^{122}$ between the AI's observation and the theoretical prediction.
 
-### Phase 4: The Simulation (Dynamical Systems)
+### Phase 4: Dynamical Simulation
 * **Goal:** Visualize the consequences of the theoretical error.
 * **Method:** Solved the Friedmann acceleration equation as an Initial Value Problem (IVP) using `scipy.integrate.odeint`.
 * **Outcome:** Demonstrated that relying on the theoretical QFT value results in a "Big Rip" scenario where the universe expands by a factor of $10^{60}$ in less than a second.

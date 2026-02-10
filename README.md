@@ -9,7 +9,7 @@
 
 ---
 
-## 📋 Executive Summary
+## Executive Summary
 I built this project to visualize the 'Vacuum Catastrophe', the 120-order-of-magnitude mismatch between Quantum Mechanics and General Relativity. Instead of just reading about it, I wanted to build a pipeline that derives the discrepancy from scratch using real observational constraints.
 
 The pipeline successfully:
@@ -20,7 +20,7 @@ The pipeline successfully:
 
 ---
 
-## 🏗️ Technical Architecture
+## Technical Architecture
 
 The project is structured into four distinct engineering phases, moving from statistical inference to theoretical validation.
 
@@ -51,7 +51,7 @@ The project is structured into four distinct engineering phases, moving from sta
 
 ---
 
-## 📊 Key Results
+## Key Results
 
 ### 1. Bayesian Parameter Estimation (Phase 1)
 Establishing the observational ground truth for $H_{0}$ and $\Omega_{m}$ using Markov Chain Monte Carlo (MCMC). This phase quantifies uncertainty and creates the "kinematic anchor" that the Neural Network uses as a hard constraint.
@@ -76,7 +76,7 @@ A dynamical simulation showing the scale factor $a(t)$ of the universe. The gree
 
 ---
 
-## 🛠️ Installation & Usage
+## Installation & Usage
 
 ### Prerequisites
 * Python 3.8+
@@ -92,6 +92,6 @@ The project is designed as a sequential pipeline of Jupyter Notebooks.
 3.  **`03_theory.ipynb`**: Calculates the Theoretical Vacuum Energy (QFT) and the discrepancy magnitude.
 4.  **`04_simulation.ipynb`**: Simulates the dynamical history of the universe, comparing Reality vs. Theory.
 
-## ⚠️ Challenges & Future Improvements
+## Challenges & Future Improvements
 * **The ODE Overflow:** In Phase 4, the theoretical vacuum energy is so massive ($10^{122}$) that standard solvers like Runge-Kutta explode instantly. I had to manually truncate the simulation time to nanoseconds to capture the crash.
 * **PINN Stability:** Getting the Neural Network to converge on $w = -1$ was difficult. I found that adding a "Physics Loss" penalty of 20.0 was necessary to stop the model from overfitting the noise.
